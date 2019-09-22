@@ -1,1 +1,4 @@
-<app-card-list></app-card-list>
+<main class="task-board" fxLayout="row wrap" fxLayoutAlign="space-between">
+    <app-toolbar fxFlex="100%" (filterTasks)="findTask($event)"></app-toolbar>
+</main>
+

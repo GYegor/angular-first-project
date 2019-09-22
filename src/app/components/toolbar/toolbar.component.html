@@ -1,1 +1,7 @@
-<p>toolbar works!</p>
+<mat-toolbar class="search-bar mat-elevation-z5">
+    <mat-form-field class="search-form">
+      <input matInput [(ngModel)]="searchCriterion" placeholder="Task name">
+      <mat-icon matSuffix class="search-form__search-icon" color="primary">search</mat-icon>
+    </mat-form-field>
+  <button mat-raised-button color="accent" (click)="filter()">Search</button>
+</mat-toolbar>

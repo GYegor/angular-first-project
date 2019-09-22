@@ -1,0 +1,15 @@
+.search-bar {
+  height: 80px;
+  padding-top: 20px;
+
+  .search-form {
+    width: 70%;
+    max-width: 600px;
+    margin-right: 16px;
+
+    &__search-icon {
+      vertical-align: bottom;
+      padding-bottom: 1px;
+    }
+  }
+}
