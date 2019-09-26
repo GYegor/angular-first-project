@@ -11,7 +11,7 @@ export class CardListComponent implements OnInit {
   @Input() cardList: ICardList;
   @Input() searchCriterion: string;
 
-  @Output() removeCard = new EventEmitter<ICard>();
+  @Output() removeCard = new EventEmitter<string>();
 
   constructor() { };
 

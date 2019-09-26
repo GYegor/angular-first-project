@@ -45,4 +45,8 @@ export class BoardComponent implements OnInit {
   ngOnInit() {
     this.cardLists = cardLists;
   }
+
+  removeCard(cardId: string) {
+    this.cardLists.forEach(list => list.cards = list.cards.filter(card => card.id !== cardId));
+  }
 }

@@ -13,8 +13,8 @@
         <p *ngIf="card.assignee"><strong>Assignee: </strong>{{ card.assignee }}</p>
       </mat-card-content>
       <mat-card-actions fxLayout="row" fxLayoutAlign="space-between">
-        <button mat-flat-button color="accent">Remove</button>
-        <button mat-flat-button color="accent">Edit</button>
+        <button mat-flat-button color="accent" (click) = removeItem($event)>Remove</button>
+        <button mat-flat-button color="accent" (click) = editItem($event)>Edit</button>
       </mat-card-actions>
     </ng-container>
 </mat-card>

@@ -10,7 +10,7 @@ import { ICard } from'../../models/ICardList';
 export class CardItemComponent implements OnInit {
   @Input() card: ICard
   @Input() isDone: boolean
-  @Output() removeCard = new EventEmitter<ICard>()
+  @Output() removeCard = new EventEmitter<string>()
   @ViewChild('editBtn', { static: false }) editBtnRef: ElementRef;
   @ViewChild('removeBtn', { static: false }) removeBtnRef: ElementRef;
 
@@ -23,5 +23,13 @@ export class CardItemComponent implements OnInit {
 
   toggleView() {
     this.isExpanded = !this.isExpanded;
+  }
+
+  removeItem(event: MouseEvent) {
+    this.removeCard.emit(this.card.id);
+  }
+
+  editItem(event: MouseEvent) {
+    event.stopPropagation();
   }
 }
