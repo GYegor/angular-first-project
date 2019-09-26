@@ -1,4 +1,7 @@
-<mat-toolbar class="page-header" >
-  <img class="page-header__logo" [src]="logoPath" alt="logo">
-  <button mat-flat-button color="primary">Log in</button>
+<mat-toolbar class="page-header mat-elevation-z6" fxLayout="row" fxLayoutAlign="space-between center" color="primary">
+  <div class="page-header__logo" fxFlex="start" fxLayout="row" fxLayoutGap="16px">
+    <img class="page-header__logo-img" [src]="logoPath" alt="logo">
+    <p fxFlexAlign="center"><strong> BID</strong></p>
+  </div>
+  <button mat-raised-button color="warn">Log in</button>
 </mat-toolbar>

@@ -1,9 +1,20 @@
-  .page-header {
-    display: flex;
-    justify-content: space-between;
+.page-header {
+  position: relative;
+  z-index: 2;
 
-    &__logo {
-      height: 70%;
-    }
-
+  &__logo {
+    height: 100%;
+    width: 100px;
   }
+
+  &__logo-img {
+    position: relative;
+    top: 15%;
+    height: 70%;
+  }
+
+  &__logo-text {
+    line-height: 3;
+  }
+
+}
