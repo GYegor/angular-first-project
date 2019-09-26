@@ -2,9 +2,10 @@
   class="card__card-inner mat-elevation-z3"
   fxLayout="column"
   fxLayoutGap="32px"
+
   (click)="toggleView()">
     <mat-card-title>
-        <strong>{{ card.name }}</strong>
+        <strong  [ngStyle]="isDone?{'text-decoration': 'line-through'}:''">{{ card.name }}</strong>
     </mat-card-title>
     <ng-container *ngIf="isExpanded">
       <mat-card-content>

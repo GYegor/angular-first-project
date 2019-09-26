@@ -11,8 +11,6 @@ export class CardItemComponent implements OnInit {
   @Input() card: ICard
   @Input() isDone: boolean
   @Output() removeCard = new EventEmitter<string>()
-  @ViewChild('editBtn', { static: false }) editBtnRef: ElementRef;
-  @ViewChild('removeBtn', { static: false }) removeBtnRef: ElementRef;
 
   public isExpanded: boolean = false;
 
@@ -25,7 +23,7 @@ export class CardItemComponent implements OnInit {
     this.isExpanded = !this.isExpanded;
   }
 
-  removeItem(event: MouseEvent) {
+  removeItem() {
     this.removeCard.emit(this.card.id);
   }
 

@@ -9,12 +9,18 @@ const cardLists: ICardList[] = [
         id:'11',
         name: '@input',
         description: 'pass props from @input',
-        dueDate: '23.09.2019',
+        dueDate: '23.10.2019',
         assignee: 'Glueg'
       },
       {
         id:'12',
         name: '@output',
+        description: 'pass over props from @output',
+        dueDate: '23.10.2019',
+      },
+      {
+        id:'13',
+        name: 'pipe',
         description: 'pass over props from @output'
       },
     ]
@@ -27,8 +33,26 @@ const cardLists: ICardList[] = [
   {
     name:'Done',
     id: '3',
-    cards: []
-  },
+    cards: [
+      {
+        id:'31',
+        name: 'hoho',
+        description: 'pass props from @input',
+        dueDate: '23.10.2019',
+        assignee: 'Glueg'
+      },
+      {
+        id:'32',
+        name: 'donedone',
+        description: 'pass over props from @output'
+      },
+      {
+        id:'33',
+        name: 'pipe',
+        description: 'pass over props from @output'
+      },
+    ]
+  }
 ];
 
 @Component({
