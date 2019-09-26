@@ -1,0 +1,11 @@
+@import '~@angular/material/theming';
+
+$mat-primary: $mat-pink;
+$mat-accent: $mat-blue-grey;
+$mat-warn: $mat-red;
+$mat-basic: $mat-grey;
+
+$primary: mat-palette($mat-primary);
+$accent:  mat-palette($mat-accent);
+$warn:    mat-palette($mat-warn);
+$basic:   mat-palette($mat-basic);
