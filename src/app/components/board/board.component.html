@@ -1,4 +1,9 @@
-<main class="task-board" fxLayout="row wrap" fxLayoutAlign="space-between">
-    <app-toolbar fxFlex="100%" (filterTasks)="findTask($event)"></app-toolbar>
+<main class="task-board" fxLayout="row wrap" fxLayoutAlign="space-around">
+  <app-toolbar class="toolbar"></app-toolbar>
+  <app-card-list
+    class="card-list"
+    *ngFor="let cardList of cardLists"
+    [cardList]="cardList"
+    [searchCriterion]="searchCriterion">
+  </app-card-list>
 </main>
-
