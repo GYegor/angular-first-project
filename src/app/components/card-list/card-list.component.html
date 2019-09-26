@@ -3,7 +3,7 @@
       <strong>{{ cardList.name }}</strong>
   </mat-card-title>
   <mat-card-content class="card-list__content" fxLayout="column">
-    <app-card-item class="card" *ngFor="let card of cardList.cards" [card]="card" (removeCard) = "removeCard.emit($event)"></app-card-item>
+    <app-card-item class="card" *ngFor="let card of cardList.cards | filterBy:searchCriterion" [card]="card" (removeCard) = "removeCard.emit($event)"></app-card-item>
   </mat-card-content>
   <mat-card-actions fxFlexAlign="center">
     <button class="button__create-list" mat-flat-button>+ Create card</button>

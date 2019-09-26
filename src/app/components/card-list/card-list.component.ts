@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
-import { ICard, ICardList } from'../../models/ICardList'
+import { ICardList } from'../../models/ICardList'
 
 @Component({
   selector: 'app-card-list',

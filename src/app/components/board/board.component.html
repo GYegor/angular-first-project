@@ -1,5 +1,5 @@
 <main class="task-board" fxLayout="row wrap" fxLayoutAlign="space-around">
-  <app-toolbar class="toolbar"></app-toolbar>
+  <app-toolbar class="toolbar" (search)="onSearch($event)"></app-toolbar>
   <app-card-list
     class="card-list"
     *ngFor="let cardList of cardLists"

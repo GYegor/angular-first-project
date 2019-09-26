@@ -46,6 +46,10 @@ export class BoardComponent implements OnInit {
     this.cardLists = cardLists;
   }
 
+  onSearch(searchString: string) {
+    this.searchCriterion = searchString;
+  }
+
   removeCard(cardId: string) {
     this.cardLists.forEach(list => list.cards = list.cards.filter(card => card.id !== cardId));
   }
