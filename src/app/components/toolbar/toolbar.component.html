@@ -1,7 +1,9 @@
 <mat-toolbar class="search-bar mat-elevation-z3">
-    <mat-form-field class="search-form">
-      <input matInput [(ngModel)]="searchCriterion" placeholder="Task name">
+  <form (submit)="getSearchString()" class="search-form">
+    <mat-form-field class="search-form__mat-form">
+      <input matInput [(ngModel)]="searchCriterion" name="searchCriterion" placeholder="Task name">
       <mat-icon matSuffix class="search-form__icon" color="accent">search</mat-icon>
     </mat-form-field>
-  <button mat-flat-button class="button" (click)="filter()">Search</button>
+    <button mat-flat-button class="button" type="submit">Search</button>
+</form>
 </mat-toolbar>

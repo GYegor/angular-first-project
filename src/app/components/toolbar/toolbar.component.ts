@@ -8,15 +8,15 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class ToolbarComponent implements OnInit {
   public searchCriterion: string;
 
-  @Output() filterTasks = new EventEmitter<string>();
+  @Output() search = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  filter() {
-    this.filterTasks.emit(this.searchCriterion)
+  getSearchString() {
+    this.search.emit(this.searchCriterion)
   };
 
 }
