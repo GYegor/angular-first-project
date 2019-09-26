@@ -1,23 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 
-import { Card } from'../../models/CardList';
-import { User } from'../../models/User';
+import { ICard } from'../../models/ICardList';
 
 @Component({
   selector: 'app-card-item',
   templateUrl: './card-item.component.html',
   styleUrls: ['./card-item.component.scss']
 })
-export class CardItemComponent implements OnInit, Card {
-  public id: string
-  public name: string
-  public description: string
-  public dueDate?: Date | string
-  public assignee?: User
+export class CardItemComponent implements OnInit {
+  @Input() card: ICard
+  @Input() isDone: boolean
+  @Output() removeCard = new EventEmitter<ICard>()
+  @ViewChild('editBtn', { static: false }) editBtnRef: ElementRef;
+  @ViewChild('removeBtn', { static: false }) removeBtnRef: ElementRef;
+
+  public isExpanded: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  toggleView() {
+    this.isExpanded = !this.isExpanded;
+  }
 }

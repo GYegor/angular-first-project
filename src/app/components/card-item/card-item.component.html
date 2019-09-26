@@ -1,1 +1,20 @@
-<p>card-item works!</p>
+<mat-card
+  class="card__card-inner mat-elevation-z3"
+  fxLayout="column"
+  fxLayoutGap="32px"
+  (click)="toggleView()">
+    <mat-card-title>
+        <strong>{{ card.name }}</strong>
+    </mat-card-title>
+    <ng-container *ngIf="isExpanded">
+      <mat-card-content>
+        <p class="card__description" *ngIf="card.description"><strong>Description: </strong>{{ card.description }}</p>
+        <p *ngIf="card.dueDate"><strong>Due date: </strong>{{card.dueDate }}</p>
+        <p *ngIf="card.assignee"><strong>Assignee: </strong>{{ card.assignee }}</p>
+      </mat-card-content>
+      <mat-card-actions fxLayout="row" fxLayoutAlign="space-between">
+        <button mat-flat-button color="accent">Remove</button>
+        <button mat-flat-button color="accent">Edit</button>
+      </mat-card-actions>
+    </ng-container>
+</mat-card>
