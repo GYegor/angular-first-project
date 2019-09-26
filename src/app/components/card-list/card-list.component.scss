@@ -1,0 +1,23 @@
+@import "~src/_variables.scss";
+
+.card-list {
+  &__list {
+    max-height: 100%;
+    background-color: mat-color($accent, 300);
+
+    .button__create-list {
+      color: mat-color($basic, 900);
+      background-color: mat-color($accent, 300);
+    }
+  }
+
+  &__name {
+    color: mat-color($basic, 900);
+  }
+
+  &__content {
+    max-height: calc(100% - 97px);
+    overflow-y: auto;
+  }
+}
+
