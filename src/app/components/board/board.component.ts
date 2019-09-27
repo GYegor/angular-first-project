@@ -1,62 +1,7 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
-import { ICardList, ICard } from './../../models/ICardList';
-const cardLists: ICardList[] = [
-  {
-    name:'Backlog',
-    id: '1',
-    cards: [
-      {
-        id:'11',
-        name: '@input',
-        description: 'pass props from @input',
-        dueDate: new Date (Date.now() + 86400000 * 2.9),
-        assignee: 'Glueg'
-      },
-      {
-        id:'12',
-        name: '@output',
-        description: 'pass over props from @output',
-        dueDate: new Date (Date.now() + 86400000 * 6.9),
-      },
-      {
-        id:'13',
-        name: 'pipe',
-        description: 'pass over props from @output',
-        dueDate: new Date (Date.now() + 86400000 * 8),
-      },
-    ]
-  },
-  {
-    name:'In progress',
-    id: '2',
-    cards: []
-  },
-  {
-    name:'Done',
-    id: '3',
-    cards: [
-      {
-        id:'31',
-        name: 'hoho',
-        description: 'pass props from @input',
-        dueDate: new Date (Date.now() + 86400000 * 2.9),
-        assignee: 'Glueg'
-      },
-      {
-        id:'32',
-        name: 'donedone',
-        description: 'pass over props from @output',
-        dueDate: new Date (Date.now() + 86400000 * 6.9),
-      },
-      {
-        id:'33',
-        name: 'pipe',
-        description: 'pass over props from @output',
-        dueDate: new Date (Date.now() + 86400000 * 8),
-      },
-    ]
-  }
-];
+import { Component, OnInit } from '@angular/core';
+import { ICardList } from './../../models/ICardList';
+import { TaskCardListsService } from './../../services/task-card-lists.service';
+
 
 @Component({
   selector: 'app-board',
@@ -64,13 +9,13 @@ const cardLists: ICardList[] = [
   styleUrls: ['./board.component.scss']
 })
 export class BoardComponent implements OnInit {
-  searchCriterion: string;
-  cardLists: ICardList[];
+  public searchCriterion: string;
+  public cardLists: ICardList[];
 
-  constructor() { }
+  constructor(private taskListsService: TaskCardListsService) {}
 
   ngOnInit() {
-    this.cardLists = cardLists;
+    this.cardLists = this.taskListsService.cardLists;
   }
 
   onSearch(searchString: string) {
@@ -78,6 +23,6 @@ export class BoardComponent implements OnInit {
   }
 
   removeCard(cardId: string) {
-    this.cardLists.forEach(list => list.cards = list.cards.filter(card => card.id !== cardId));
+    this.taskListsService.removeCard(cardId);
   }
 }

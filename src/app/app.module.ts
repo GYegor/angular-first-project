@@ -16,6 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { FilterByPipe } from './pipes/filter-by.pipe';
 import { ExpireWarnDirective } from './directives/expire-warn.directive';
+import { TaskCardListsService } from './services/task-card-lists.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { ExpireWarnDirective } from './directives/expire-warn.directive';
     AppMaterialModule,
     FlexLayoutModule
   ],
-  providers: [],
+  providers: [TaskCardListsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
