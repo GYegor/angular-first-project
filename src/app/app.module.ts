@@ -15,6 +15,7 @@ import { CardItemComponent } from './components/card-item/card-item.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { FilterByPipe } from './pipes/filter-by.pipe';
+import { ExpireWarnDirective } from './directives/expire-warn.directive';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FilterByPipe } from './pipes/filter-by.pipe';
     CardItemComponent,
     FooterComponent,
     FilterByPipe,
+    ExpireWarnDirective,
   ],
   imports: [
     BrowserModule,

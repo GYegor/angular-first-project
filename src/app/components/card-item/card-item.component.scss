@@ -7,3 +7,16 @@
     background-color: mat-color($accent, 100);
   }
 }
+
+.card-button {
+  color: mat-color($basic, 900);
+  background-color: mat-color($accent, 100);
+}
+
+.warn {
+  background-color: mat-color($warn, 200);
+}
+
+.sub-warn {
+  background-color: mat-color($sub-warn, 200);
+}

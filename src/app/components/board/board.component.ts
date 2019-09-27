@@ -9,19 +9,20 @@ const cardLists: ICardList[] = [
         id:'11',
         name: '@input',
         description: 'pass props from @input',
-        dueDate: '23.10.2019',
+        dueDate: new Date (Date.now() + 86400000 * 2.9),
         assignee: 'Glueg'
       },
       {
         id:'12',
         name: '@output',
         description: 'pass over props from @output',
-        dueDate: '23.10.2019',
+        dueDate: new Date (Date.now() + 86400000 * 6.9),
       },
       {
         id:'13',
         name: 'pipe',
-        description: 'pass over props from @output'
+        description: 'pass over props from @output',
+        dueDate: new Date (Date.now() + 86400000 * 8),
       },
     ]
   },
@@ -38,18 +39,20 @@ const cardLists: ICardList[] = [
         id:'31',
         name: 'hoho',
         description: 'pass props from @input',
-        dueDate: '23.10.2019',
+        dueDate: new Date (Date.now() + 86400000 * 2.9),
         assignee: 'Glueg'
       },
       {
         id:'32',
         name: 'donedone',
-        description: 'pass over props from @output'
+        description: 'pass over props from @output',
+        dueDate: new Date (Date.now() + 86400000 * 6.9),
       },
       {
         id:'33',
         name: 'pipe',
-        description: 'pass over props from @output'
+        description: 'pass over props from @output',
+        dueDate: new Date (Date.now() + 86400000 * 8),
       },
     ]
   }
