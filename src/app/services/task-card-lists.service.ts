@@ -5,6 +5,13 @@ import { IUser } from './../models/IUser';
 
 @Injectable()
 export class TaskCardListsService {
+
+  private user: IUser = {
+    id: '1',
+    firstName: 'Hoy',
+    lastName: 'Glueg'
+  }
+
   public readonly cardLists: ICardList[] = [
     {
       name:'Backlog',
@@ -15,13 +22,14 @@ export class TaskCardListsService {
           name: '@input',
           description: 'pass props from @input',
           dueDate: new Date (Date.now() + 86400000 * 2.9),
-          assignee: 'Glueg'
+          assignee: `${this.user.firstName+' '+this.user.lastName}`,
         },
         {
           id:'12',
           name: '@output',
           description: 'pass over props from @output',
           dueDate: new Date (Date.now() + 86400000 * 6.9),
+          assignee: `${this.user.firstName+' '+this.user.lastName}`,
         },
         {
           id:'13',
@@ -34,7 +42,21 @@ export class TaskCardListsService {
     {
       name:'In progress',
       id: '2',
-      cards: []
+      cards: [ {
+        id:'21',
+        name: 'Doinggoing',
+        description: 'pass pass from from to to',
+        dueDate: new Date (Date.now() + 86400000 * 6.9),
+        assignee: `${this.user.firstName+' '+this.user.lastName}`,
+      },
+      {
+        id:'22',
+        name: 'DoingWantToDo',
+        description: 'pass pass too from from to to',
+        dueDate: new Date (Date.now() + 86400000 * 11.9),
+        assignee: `${this.user.firstName+' '+this.user.lastName}`,
+      },
+    ],
     },
     {
       name:'Done',
@@ -45,7 +67,7 @@ export class TaskCardListsService {
           name: 'hoho',
           description: 'pass props from @input',
           dueDate: new Date (Date.now() + 86400000 * 2.9),
-          assignee: 'Glueg'
+          assignee: `${this.user.firstName+' '+this.user.lastName}`,
         },
         {
           id:'32',
