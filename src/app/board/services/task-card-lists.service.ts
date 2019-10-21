@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { ICardList } from './../models/ICardList';
-import { IUser } from './../models/IUser';
+import { ICardList } from '../models/ICardList';
+import { IUser } from '../models/IUser';
 
 
 @Injectable()
