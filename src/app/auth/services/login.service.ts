@@ -19,6 +19,7 @@ export class LoginService {
 
   logOut(): void {
     localStorage.removeItem('accessToken');
+    this.router.navigate(['/login']);
   }
 
 }

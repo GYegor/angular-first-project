@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { LoginService } from './../../../auth/services/login.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -10,7 +11,7 @@ export class ToolbarComponent implements OnInit {
 
   @Output() search = new EventEmitter<string>();
 
-  constructor() { }
+  constructor(private loginService: LoginService) { }
 
   ngOnInit() {
   }
@@ -19,4 +20,7 @@ export class ToolbarComponent implements OnInit {
     this.search.emit(this.searchCriterion)
   };
 
+  logOut() {
+    this.loginService.logOut()
+  }
 }
