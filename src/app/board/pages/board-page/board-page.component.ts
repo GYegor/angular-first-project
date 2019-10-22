@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { ICardList } from './../../models/ICardList';
-import { TaskCardListsService } from './../../services/task-card-lists.service';
+import { ICardList } from '../../models/ICardList';
+import { TaskCardListsService } from '../../services/task-card-lists.service';
 
 
 @Component({
   selector: 'app-board',
-  templateUrl: './board.component.html',
-  styleUrls: ['./board.component.scss']
+  templateUrl: './board-page.component.html',
+  styleUrls: ['./board-page.component.scss']
 })
-export class BoardComponent implements OnInit {
+export class BoardPageComponent implements OnInit {
   public searchCriterion: string;
   public cardLists: ICardList[];
 

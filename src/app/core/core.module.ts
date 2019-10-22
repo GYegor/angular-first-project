@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
-import { FormsModule } from '@angular/forms';
+// import { FormsModule } from '@angular/forms';
 
 const COMPONENTS = [
   HeaderComponent,
@@ -19,7 +19,7 @@ const COMPONENTS = [
   imports: [
     CommonModule,
     SharedModule,
-    FormsModule,
+    // FormsModule,
   ],
   exports: [
     ...COMPONENTS
