@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoadGuard } from './core/guards/load.guard';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'prefix' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
     path: 'login',
     loadChildren: './auth/auth.module#AuthModule',

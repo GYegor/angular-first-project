@@ -1,1 +1,13 @@
-<p>login-page works!</p>
+<mat-card class=" login-form mat-elevation-z3">
+    <form (submit)="login()" fxLayout="column">
+        <mat-form-field>
+          <input matInput [(ngModel)]="userName" placeholder="Username" name="userName">
+        </mat-form-field>
+        <mat-form-field>
+          <input type="password" matInput [(ngModel)]="password" placeholder="password" name="password">
+        </mat-form-field>
+        <button type="submit" mat-raised-button fxFlexAlign="center">
+          <span>Login</span>
+        </button>
+    </form>
+</mat-card>

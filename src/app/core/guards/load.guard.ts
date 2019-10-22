@@ -1,3 +1,4 @@
+import { LoginService } from './../../auth/services/login.service';
 import { Injectable } from '@angular/core';
 import { CanLoad, Router } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -6,9 +7,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class LoadGuard implements CanLoad {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private loginService: LoginService) {}
   canLoad(): Observable<boolean> | Promise<boolean> | boolean {
-      this.router.navigate(['/login'], )
+    if (this.loginService.hasToken()) {
+      return true;
+    };
+    this.router.navigate(['/login'])
     return false;
   }
 }
