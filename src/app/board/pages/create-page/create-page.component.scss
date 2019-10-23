@@ -1,6 +1,7 @@
 @import "~src/_variables.scss";
 
-.login-form {
+
+.create-card {
   box-sizing: border-box;
   width: calc(100vw - 32px);
   max-width: 600px;
@@ -9,7 +10,6 @@
   background-color: mat-color($accent, 100);
 }
 
-.login-button {
-background-color: mat-color($accent, 100);
-font-weight: 600;
+.create-list-button {
+  background-color: mat-color($accent, 100);
 }

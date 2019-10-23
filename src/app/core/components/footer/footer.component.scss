@@ -1,8 +1,9 @@
 @import "~src/_variables.scss";
 
-.footer {
+.page-footer {
   height: 48px;
-  background-color: mat-color($accent, 800);
+  color: mat-color($basic, 900);
+  background-color: mat-color($accent, 300);
   font-size: 1em;
   font-weight: 400;
 }

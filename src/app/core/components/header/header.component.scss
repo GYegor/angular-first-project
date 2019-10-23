@@ -1,6 +1,11 @@
+@import "~src/_variables.scss";
+
 .page-header {
   position: relative;
   z-index: 2;
+  color: mat-color($accent, 100);
+  background-color: mat-color($accent, 700);
+
 
   &__logo {
     height: 100%;
@@ -16,5 +21,8 @@
   &__logo-text {
     line-height: 3;
   }
-
+  .button {
+    color: mat-color($accent, 100);
+    background-color: mat-color($accent, 700);
+    }
 }

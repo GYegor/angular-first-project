@@ -1,7 +1,11 @@
-@import '@angular/material/prebuilt-themes/pink-bluegrey.css';
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "~src/_variables.scss";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; overflow-y: auto}
+html, body {
+  height: 100%;   background-color: mat-color($accent, 200);
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; overflow-y: auto;}
+
 body::-webkit-scrollbar {
   width: 0;
 }

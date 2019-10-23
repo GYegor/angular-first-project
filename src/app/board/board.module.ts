@@ -12,6 +12,8 @@ import { BoardPageComponent } from './pages/board-page/board-page.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { CardListComponent } from './components/card-list/card-list.component';
 import { CardItemComponent } from './components/card-item/card-item.component';
+import { CreatePageComponent } from './pages/create-page/create-page.component';
+import { EditPageComponent } from './pages/edit-page/edit-page.component';
 
 
 const COMPONENTS = [
@@ -26,6 +28,8 @@ const COMPONENTS = [
     ...COMPONENTS,
     FilterByPipe,
     ExpireWarnDirective,
+    CreatePageComponent,
+    EditPageComponent,
   ],
   imports: [
     CommonModule,

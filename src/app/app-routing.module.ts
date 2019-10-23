@@ -13,7 +13,7 @@ const routes: Routes = [
     loadChildren: './board/board.module#BoardModule',
     canLoad: [LoadGuard],
   },
-  // { path: '**', component: NotFoundComponent }, // при отсутствии совпадений показываем нотфаунд страничку
+  // { path: '**', redirectTo: 'login', pathMatch: 'full' }, // при отсутствии совпадений можно еще показывать нотфаунд страничку
 
 ];
 

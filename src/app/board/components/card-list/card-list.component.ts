@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 import { ICardList } from'../../models/ICardList'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-list',
@@ -13,9 +14,12 @@ export class CardListComponent implements OnInit {
 
   @Output() removeCard = new EventEmitter<string>();
 
-  constructor() { };
+  constructor(private router: Router) { };
 
   ngOnInit() {
   };
 
+  openCreatePage() {
+    this.router.navigate(['/board', 'create'])
+  }
 }
