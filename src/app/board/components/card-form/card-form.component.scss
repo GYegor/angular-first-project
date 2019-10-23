@@ -1,0 +1,15 @@
+@import "~src/_variables.scss";
+
+
+.card-form {
+  box-sizing: border-box;
+  width: calc(100vw - 32px);
+  max-width: 600px;
+  margin: 16px auto;
+  color: mat-color($basic, 900);
+  background-color: mat-color($accent, 100);
+}
+
+.button {
+  background-color: mat-color($accent, 100);
+}
