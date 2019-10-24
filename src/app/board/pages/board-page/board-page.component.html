@@ -5,6 +5,7 @@
     *ngFor="let cardList of cardLists"
     [cardList]="cardList"
     [searchCriterion]="searchCriterion"
-    (removeCard) = "removeCard($event)">
+    (removeCard) = "removeCard($event)"
+    (editCard) = "editCard($event)">
   </app-card-list>
 </main>

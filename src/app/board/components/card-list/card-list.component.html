@@ -3,8 +3,12 @@
     <strong>{{ cardList.name }}</strong>
   </mat-card-title>
   <mat-card-content class="card-list__content" fxLayout="column">
-    <app-card-item class="card" *ngFor="let card of cardList.cards | filterBy:searchCriterion"
-      [card]="card" [isDone]="cardList.name === 'Done'" (removeCard)="removeCard.emit($event)">
+    <app-card-item class="card"
+      *ngFor="let card of cardList.cards | filterBy:searchCriterion"
+      [card]="card"
+      [isDone]="cardList.name === 'Done'"
+      (removeCard)="removeCard.emit($event)"
+      (editCard)="editCard.emit($event)">
     </app-card-item>
   </mat-card-content>
   <mat-card-actions fxFlexAlign="center">

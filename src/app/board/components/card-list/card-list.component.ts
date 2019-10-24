@@ -9,10 +9,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./card-list.component.scss']
 })
 export class CardListComponent implements OnInit {
+
   @Input() cardList: ICardList;
   @Input() searchCriterion: string;
 
   @Output() removeCard = new EventEmitter<string>();
+  @Output() editCard = new EventEmitter<string>();
 
   constructor(private router: Router) { };
 

@@ -13,7 +13,7 @@ const routes: Routes = [
     path: 'board/create', component: CreatePageComponent
   },
   {
-    path: 'board/edit', component: EditPageComponent
+    path: 'board/edit/:id', component: EditPageComponent
   }
 ];
 

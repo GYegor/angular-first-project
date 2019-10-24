@@ -1,5 +1,5 @@
+import { IUser } from './../../models/IUser';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
 import { ICard } from'../../models/ICardList';
 
 @Component({
@@ -11,6 +11,7 @@ export class CardItemComponent implements OnInit {
   @Input() card: ICard
   @Input() isDone: boolean
   @Output() removeCard = new EventEmitter<string>()
+  @Output() editCard = new EventEmitter<string>()
 
   public isExpanded: boolean = false;
 
@@ -27,7 +28,11 @@ export class CardItemComponent implements OnInit {
     this.removeCard.emit(this.card.id);
   }
 
-  editItem(event: MouseEvent) {
-    event.stopPropagation();
+  editItem() {
+    this.editCard.emit(this.card.id);
+  }
+
+  assigneeFullName(user: IUser) {
+    return `${user.firstName+' '+user.lastName}`;
   }
 }

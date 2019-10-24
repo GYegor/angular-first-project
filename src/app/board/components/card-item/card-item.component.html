@@ -7,7 +7,7 @@
     <mat-card-content>
       <p class="card__description" *ngIf="card.description"><strong>Description: </strong>{{ card.description }}</p>
       <p *ngIf="card.dueDate"><strong>Due date: </strong>{{ card.dueDate | date:'longDate' }}</p>
-      <p *ngIf="card.assignee"><strong>Assignee: </strong>{{ card.assignee }}</p>
+      <p *ngIf="card.assignee"><strong>Assignee: </strong>{{ assigneeFullName(card.assignee) }}</p>
     </mat-card-content>
     <mat-card-actions fxLayout="row" fxLayoutAlign="space-between">
       <button mat-raised-button class="card-button"
