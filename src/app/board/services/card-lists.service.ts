@@ -117,4 +117,9 @@ export class CardListsService {
       }
     }
   }
+
+  public createCard(newCard: ICard) {
+    const cardWithId = { ...newCard, id: (this.cardLists[0].cards.length + 1).toString() };
+    this.cardLists[0].cards = [ ...this.cardLists[0].cards, cardWithId ];
+  }
 }

@@ -6,9 +6,9 @@ export interface ICardList {
   cards: ICard[]
 }
 export interface ICard {
-  id: string
-  name: string
-  description: string
-  dueDate?: Date | string
-  assignee?: IUser | string
+  id: string | null
+  name: string | null
+  description: string | null
+  dueDate?: Date | string | null
+  assignee?: IUser | string | null
 }

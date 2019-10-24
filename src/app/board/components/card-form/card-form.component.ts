@@ -12,6 +12,7 @@ import { IUser } from '../../models/IUser';
 export class CardFormComponent implements OnInit {
 
   @Input() card: ICard;
+  @Input() isNew: boolean;
   public cardCopy: ICard;
   public boardContent: ICardList[];
   public assignees: IUser[];
@@ -30,6 +31,11 @@ export class CardFormComponent implements OnInit {
   }
 
   commitCard() {
+    if(this.isNew) {
+      this.fakeStorage.createCard(this.cardCopy);
+      this.router.navigate(['board']);
+      return;
+    }
     this.fakeStorage.addData(this.cardCopy);
     this.router.navigate(['board']);
   }
