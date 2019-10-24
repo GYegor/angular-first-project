@@ -13,8 +13,6 @@ const routes: Routes = [
     loadChildren: './board/board.module#BoardModule',
     canLoad: [LoadGuard],
   },
-  // { path: '**', redirectTo: 'login', pathMatch: 'full' }, // при отсутствии совпадений можно еще показывать нотфаунд страничку
-
 ];
 
 @NgModule({

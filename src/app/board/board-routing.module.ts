@@ -14,7 +14,11 @@ const routes: Routes = [
   },
   {
     path: 'board/edit/:id', component: EditPageComponent
-  }
+  },
+  {
+    path: '**', redirectTo: 'board', pathMatch: 'full'
+  },
+
 ];
 
 @NgModule({

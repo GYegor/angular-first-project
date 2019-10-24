@@ -15,11 +15,14 @@ export class LoginPageComponent implements OnInit {
   constructor(private router: Router, private loginService: LoginService) { }
 
   ngOnInit() {
+    if (this.loginService.hasToken()) {
+      this.userName = this.loginService.loggedUser;
+      this.password = this.loginService.loggedPassword;
+    }
   }
 
   login() {
     this.loginService.setToken(this.userName,this.password);
     if (this.loginService.hasToken()) this.router.navigate(['/board']);
   };
-
 }

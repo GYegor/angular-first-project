@@ -6,11 +6,16 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class LoginService {
+  public loggedUser: string = localStorage.getItem('userName')
+  public loggedPassword: string = '/////'
 
   constructor(private router: Router,) { }
 
   setToken(user?: string, password?: string): void {
-    if (user && password) localStorage.setItem('accessToken', `${user}${password}`);
+    if (user && password && !this.hasToken()) {
+      localStorage.setItem('accessToken', user + password);
+      localStorage.setItem('userName', user);
+    }
   }
 
   hasToken(): boolean {
@@ -19,6 +24,7 @@ export class LoginService {
 
   logOut(): void {
     localStorage.removeItem('accessToken');
+    localStorage.removeItem('userName');
     this.router.navigate(['/login']);
   }
 

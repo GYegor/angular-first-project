@@ -1,10 +1,10 @@
 <mat-card class=" login-form mat-elevation-z3">
     <form (submit)="login()" fxLayout="column">
         <mat-form-field>
-          <input matInput [(ngModel)]="userName" placeholder="Username" name="userName">
+          <input matInput name="userName" [(ngModel)]="userName" placeholder="Username" autocomplete="off">
         </mat-form-field>
         <mat-form-field>
-          <input type="password" matInput [(ngModel)]="password" placeholder="password" name="password">
+          <input matInput type="password" name="password" [(ngModel)]="password" placeholder="password">
         </mat-form-field>
         <button class="login-button"type="submit" mat-raised-button fxFlexAlign="center">
           <span>Login</span>
