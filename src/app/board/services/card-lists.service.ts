@@ -105,7 +105,7 @@ export class CardListsService {
   public getCardById(id: number | string): ICard {
     for (let i = 0; i < this.cardLists.length; i++) {
       let result = this.cardLists[i].cards.find(card => card.id == id)
-      return result;
+      if(result) return result;
     }
   }
 
