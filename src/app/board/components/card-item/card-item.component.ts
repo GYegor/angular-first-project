@@ -24,11 +24,11 @@ export class CardItemComponent implements OnInit {
     this.isExpanded = !this.isExpanded;
   }
 
-  removeItem() {
+  removeItem(event?: Event) {
     this.removeCard.emit(this.card.id);
   }
 
-  editItem() {
+  editItem(event?: Event) {
     this.editCard.emit(this.card.id);
   }
 

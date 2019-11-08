@@ -10,5 +10,5 @@ export interface ICard {
   name: string | null
   description: string | null
   dueDate?: Date | string | null
-  assignee?: IUser | string | null
+  assignee?: IUser | null
 }
