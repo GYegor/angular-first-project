@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod --base-href 'https://github.com/GYegor/my-Project-Board-on-Angular-8.2.5'",
+    "gh-pages": "ngh --dir dist/my-project-board-on-angular-8.2.5",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
